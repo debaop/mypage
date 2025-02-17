@@ -1,0 +1,41 @@
+body{
+    
+   margin: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: hsl(187, 47%, 82%);
+}
+h1,h2, p {
+    margin: 1em auto;
+    margin-right: 100px;
+    text-align: center;
+}
+h3{
+    font-size: xx-large;
+}
+h1{
+    font-style: oblique;
+}
+.center-image {
+    display: block;
+    margin-left: 20px;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+}
+.center-container {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.center-container a {
+    margin-right: 20px; 
+}
+
+.center-container img {
+    max-width: 100%;
+    height: auto;
+}
