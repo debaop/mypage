@@ -1,10 +1,8 @@
 body{
     
    margin: 50px;
-    /* margin-left: 100px; */
-    /* margin-right: 100px; */
+   
     background-color: hsl(210, 50%, 85%);
-    /* padding: 0 10%; */
    
 }
 h1,h2, p {
@@ -24,8 +22,8 @@ h1{
     max-width: 100%;
     height: auto;
     display: block;
-    border-radius: 5%; /* Makes the edges round */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /*Adds a subtle shadow for aesthetics */
+    border-radius: 5%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     align-items: center;
     justify-content: center;
 }
@@ -61,4 +59,23 @@ h1{
     padding: 20px;
     border-top: 1px solid #ccc;
     text-size-adjust: 30px;
+}
+@media (max-width: 600px) {
+    .center-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .center-container a {
+        margin-right: 0;
+        margin-bottom: 15px;
+        font-size: 1.3em; 
+    }
+    .center-container img {
+        width: 90vw; 
+        max-width: 300px; 
+        height: auto;
+    }
+    h1, h2, h3, p {
+        font-size: 1.3em; 
+    }
 }
