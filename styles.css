@@ -2,7 +2,9 @@ body{
     
    margin: 50px;
    
-    background-color: hsl(210, 50%, 85%);
+background: #080436;
+background: linear-gradient(98deg, rgba(8, 4, 54, 1) 23%, rgba(9, 9, 121, 1) 62%);
+   color : #ffffff;
    
 }
 h1,h2, p {
@@ -35,6 +37,12 @@ h1{
     justify-content: center;
     text-align: center; 
 }
+
+/* Nudge social icons up so they sit a bit above the lower image */
+.center-container {
+    transform: translateY(-12px);
+    transition: transform 150ms ease;
+}
 .center-container a {
     margin-right: 20px; 
 }
@@ -42,6 +50,17 @@ h1{
 .center-container img {
     max-width: 100%;
     height: auto;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform 120ms ease-in-out;
+}
+.social-icon:hover {
+    transform: scale(1.08);
 }
 .footer {
     text-align: center;
@@ -65,6 +84,8 @@ h1{
         flex-direction: column;
         padding: 10px;
     }
+    /* reduce the nudge on small screens */
+    .center-container { transform: translateY(-6px); }
     .center-container a {
         margin-right: 0;
         margin-bottom: 15px;
