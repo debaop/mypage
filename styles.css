@@ -5,13 +5,20 @@ body{
 background: #080436;
 background: linear-gradient(98deg, rgba(8, 4, 54, 1) 23%, rgba(9, 9, 121, 1) 62%);
    color : #ffffff;
-   
+   flex: au;
 }
-h1,h2, p {
+h1,h2,h3{
     margin: 1em auto;
     margin-right: 100px;
     text-align: center;
 }
+p{
+    margin: 1em auto;
+    margin-right: 100px;
+    text-align: center;
+    font-size:x-large
+}
+
 h3{
     font-size: xx-large;
 }
@@ -37,8 +44,29 @@ h1{
     justify-content: center;
     text-align: center; 
 }
+.about-box {
+    width: 85%;                 /* Responsive width */
+    max-width: 680px;           /* Limit width on large screens */
+    padding: 22px 26px;         /* Comfortable inner spacing */
+    margin: 26px auto;          /* Center the box horizontally */
+    border: 1px solid rgba(255,255,255,0.08); /* subtle light border */
+    background-color: rgba(255,255,255,0.03); /* slightly translucent to lift it from background */
+    box-sizing: border-box;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(2,6,23,0.45); /* slightly stronger shadow for contrast */
+    color: #ffffff;
+    text-align: left;           /* Left-align content for readability */
+    line-height: 1.6;          /* improve readability */
+    font-size: 2rem;
+}
 
-/* Nudge social icons up so they sit a bit above the lower image */
+.about-box p {
+    margin: 0;                  /* remove external margins that conflict with the box */
+    padding: 0;
+    color: inherit;
+    font-size: 1.5rem;
+}
+
 .center-container {
     transform: translateY(-12px);
     transition: transform 150ms ease;
@@ -52,6 +80,60 @@ h1{
     height: auto;
 }
 
+/* Project list and gift links styled as buttons */
+.project-list, .gifts {
+    list-style: none;
+    padding: 0;
+    margin: 18px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+}
+.project-list li, .gifts li {
+    margin: 0;
+}
+.project-list h4, .gifts h4 { margin: 0; }
+.project-list a, .gifts a {
+    display: inline-block;
+    background: rgba(255,255,255,0.06);
+    color: #ffffff;
+    padding: 10px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid rgba(255,255,255,0.10);
+    transition: transform 120ms ease, background 120ms ease, box-shadow 120ms ease;
+    box-shadow: 0 6px 12px rgba(2,6,23,0.35);
+}
+/* Hover effects only for devices that support hover (desktop) */
+@media (hover: hover) and (pointer: fine) {
+    .project-list a:hover, .gifts a:hover {
+        transform: translateY(-4px);
+        background: rgba(255,255,255,0.12);
+        box-shadow: 0 12px 24px rgba(2,6,23,0.45);
+    }
+    .social-icon:hover {
+        transform: scale(1.08);
+    }
+}
+.project-list a:active, .gifts a:active {
+    transform: translateY(-1px);
+}
+
+@media (max-width: 600px) {
+    .project-list, .gifts {
+        gap: 10px;
+        padding: 0 6px;
+    }
+    .project-list a, .gifts a {
+        padding: 12px 18px;
+        font-size: 1rem;
+    }
+}
+
 .social-icon {
     width: 40px;
     height: 40px;
@@ -59,9 +141,7 @@ h1{
     vertical-align: middle;
     transition: transform 120ms ease-in-out;
 }
-.social-icon:hover {
-    transform: scale(1.08);
-}
+
 .footer {
     text-align: center;
     margin-top: 50px;
@@ -99,4 +179,8 @@ h1{
     h1, h2, h3, p {
         font-size: 1.3em; 
     }
+
+}
+.footer{
+    background-color: transparent;
 }
